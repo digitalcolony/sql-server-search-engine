@@ -1,6 +1,6 @@
 # Writing Your Own Site Search Engine with SQL Server
 
-Before I moved my blog to WordPress, I wrote my own site search engine that was superior to how Google was indexing my site. 
+Before I moved my coffee website to WordPress, I wrote my own site search engine that was superior to how Google was indexing my site.
 
 ## Article
 
