@@ -1,5 +1,10 @@
-sql-server-search-engine
-========================
+# Writing Your Own Site Search Engine with SQL Server
 
-Write your own search engine. 
-http://criticalmas.com/2011/12/writing-search-engine-using-sql-server/
+Before I moved my blog to WordPress, I wrote my own site search engine that was superior to how Google was indexing my site. 
+
+## Article
+
+[Writing Your Own Search Engine Using SQL Server](
+http://criticalmas.com/2011/12/writing-search-engine-using-sql-server/) - My blog post on CriticalMAS explaining everything.
+
+_created: 2011_

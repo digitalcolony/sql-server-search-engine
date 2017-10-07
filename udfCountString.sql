@@ -1,3 +1,4 @@
+/* CREDIT: http://www.sql-server-helper.com/functions/count-string.aspx */
 CREATE FUNCTION [dbo].[udfCountString](
     @InputString    VARCHAR(MAX),
     @SearchString    VARCHAR(100)

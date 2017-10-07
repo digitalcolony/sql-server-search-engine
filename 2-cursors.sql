@@ -1,10 +1,11 @@
 DECLARE ContentCursor CURSOR FAST_FORWARD FOR
 SELECT url, title, longDesc, quality, page
-FROM Articles 
+FROM Articles
 
 DECLARE SearchWordCursor CURSOR DYNAMIC FOR
-SELECT word, position FROM #searchWords
-OPEN SearchWordCursor 
+SELECT word, position
+FROM #searchWords
+OPEN SearchWordCursor
 
 OPEN ContentCursor
 FETCH NEXT FROM ContentCursor INTO @url, @title, @longDesc, @quality, @page
@@ -24,14 +25,18 @@ BEGIN
         SET @count = dbo.udfCountString(@title, @word)
         IF @count > 0
         BEGIN
-            INSERT INTO #searchResults VALUES (@url, @title, @longDesc, @quality, @score * 10)
+            INSERT INTO #searchResults
+            VALUES
+                (@url, @title, @longDesc, @quality, @score * 10)
         END
         -- search the PAGE
         SET @count = dbo.udfCountString(@page, @word)
         IF @count > 0
         BEGIN
-            INSERT INTO #searchResults VALUES (@url, @title, @longDesc, @quality, @score)
-        END                    
+            INSERT INTO #searchResults
+            VALUES
+                (@url, @title, @longDesc, @quality, @score)
+        END
 
         FETCH NEXT FROM SearchWordCursor INTO @word, @position
     END
